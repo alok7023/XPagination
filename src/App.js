@@ -12,7 +12,7 @@ function App() {
       const data = await response.json();
       setTableData(data);
     } catch (error) {
-      alert(error);
+      alert("failed to fetch data");
     }
   };
   useEffect(() => {
