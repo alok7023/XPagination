@@ -7,9 +7,13 @@ function App() {
   const [itemsPerPage] = useState(10);
 
   const fetchData = async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setTableData(data);
+    try {
+      const response = await fetch(URL);
+      const data = await response.json();
+      setTableData(data);
+    } catch (error) {
+      alert(error);
+    }
   };
   useEffect(() => {
     fetchData();
