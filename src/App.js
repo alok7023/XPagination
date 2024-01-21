@@ -54,7 +54,7 @@ function App() {
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          Prev
+          Previous
         </button>
         <span className="current-page">{currentPage}</span>
         <button
